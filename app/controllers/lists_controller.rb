@@ -4,6 +4,9 @@ class ListsController < ApplicationController
   end
 
   def create
+    @list = List.new(list_params)
+    @list.save
+    redirect_to lists_path
   end
 
   def index
@@ -19,6 +22,12 @@ class ListsController < ApplicationController
   end
 
   def destroy
+  end
+
+  private
+
+  def list_params
+    params.require(:list).permit(:title, :body)
   end
 
 end
