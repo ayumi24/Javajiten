@@ -1,6 +1,9 @@
 <h1>これまでの記録</h1>
 <% @lists.each do |list| %>
   <div>
-    <p>タイトル:<%= list.title %></p>
+    <p>タイトル</p>
+      <span>
+        <%= link_to list.title, list_path(list.id) %>
+      </span>
   </div>
 <% end %>
