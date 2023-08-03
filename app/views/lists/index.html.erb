@@ -1,9 +1,15 @@
-<h1>これまでの記録</h1>
-<% @lists.each do |list| %>
-  <div>
-    <p>タイトル</p>
-      <span>
-        <%= link_to list.title, list_path(list.id) %>
-      </span>
-  </div>
-<% end %>
+<h3 class="text-center">これまでの記録</h3>
+  <table class="table">
+    <% @lists.each do |list| %>
+      <thead>
+        <tr>
+          <th>タイトル</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><%= link_to list.title, list_path(list.id) %></td>
+        </tr>
+      </tbody>
+    <% end %>
+  </table>
