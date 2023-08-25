@@ -14,6 +14,21 @@
  *= require_self
  */
 
+header{
+  width: 100%;
+  height: 50px;
+  background-color: #e6e6fa;
+}
+
+.li{
+  line-height: 50px;
+}
+
  .heading{
    text-align: center;
+   margin-top: 10px;
+ }
+
+ .nav-item{
+   margin-right: 15px;
  }
