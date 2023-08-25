@@ -1,8 +1,10 @@
-<h1>記録を作成</h1>
-<%= form_with model:@list do |f| %>
-  <h4>タイトル</h4>
-    <%= f.text_field :title %>
-  <h4>内容</h4>
-    <%= f.text_area :body %>
-  <%= f.submit '記録' %>
-<% end %>
+<h3 class="heading">記録を作成</h3>
+  <div class="container">
+    <%= form_with model:@list do |f| %>
+      <h5>タイトル</h5>
+        <%= f.text_field :title %>
+      <h5>内容</h5>
+        <%= f.text_area :body %>
+      <%= f.submit '記録' %>
+  <% end %>
+</div>
