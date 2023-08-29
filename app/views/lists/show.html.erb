@@ -4,5 +4,6 @@
     <p>内容:<br><%=  safe_join(@list.body.split("\n"), tag(:br)) %></p>
     <!-- 年月日表示に変更 -->
     <p>記録日:<%= @list.created_at.strftime('%Y/%m/%d') %></p>
+    <%= link_to "編集", edit_list_path(@list.id), class: "btn btn-md btn-success" %>
     <%= link_to "削除", list_path(@list.id), method: :delete, "data-confirm" => "本当に削除しますか？", class: "btn btn-md btn-danger" %>
   </div>

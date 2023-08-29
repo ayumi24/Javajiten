@@ -18,9 +18,17 @@ class ListsController < ApplicationController
   end
 
   def edit
+    @list = List.find(params[:id])
   end
 
   def update
+    @list = List.find(params[:id])
+      if @list.update(list_params)
+        flash[:notice]= "更新しました"
+        redirect_to list_path(@list.id)
+      else
+        render :edit
+      end
   end
 
   def destroy

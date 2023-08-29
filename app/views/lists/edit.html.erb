@@ -1,2 +1,10 @@
-<h1>Lists#edit</h1>
-<p>Find me in app/views/lists/edit.html.erb</p>
+<h3 class="heading">記録編集</h3>
+  <div class="container">
+    <%= form_with model:@list do |f| %>
+      <h5>タイトル</h5>
+        <%= f.text_field :title, :size =>"60" %>
+      <h5>内容</h5>
+        <%= f.text_area :body, :size =>"60x10" %><br>
+      <%= f.submit '更新', class: "btn btn-md btn-success" %>
+  <% end %>
+</div>
