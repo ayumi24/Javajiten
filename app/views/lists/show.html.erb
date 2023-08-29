@@ -1,5 +1,8 @@
 <h3 class="heading">記録詳細</h3>
   <div class="container">
+    <div>
+      <%= flash[:notice] %>
+    </div>
     <p>タイトル:<%= @list.title %></p>
     <p>内容:<br><%=  safe_join(@list.body.split("\n"), tag(:br)) %></p>
     <!-- 年月日表示に変更 -->
